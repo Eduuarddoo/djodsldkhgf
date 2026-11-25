@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "content_scripts": [
+    {
+      "js": [
+        "src/hook.js",
+        "src/game.js",
+        "src/engine.js",
+        "src/geo.js",
+        "src/ui.js",
+        "src/auto.js",
+        "src/pix.js",
+        "src/apoio.js"
+      ],
+      "matches": [
+        "https://pokeidle.io/*"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "css": [
+        "src/ui.css"
+      ],
+      "matches": [
+        "https://pokeidle.io/*"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "Fica sempre na melhor hunt do PokeIdle e repõe bolas, poções e revives sozinho. Baseada no /hunt for PokeIdle, de Liang.",
+  "icons": {
+    "128": "icons/icon-128.png",
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png"
+  },
+  "manifest_version": 3,
+  "name": "Auto Hunt for PokeIdle",
+  "version": "1.1.1"
+}
